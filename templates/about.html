@@ -4,5 +4,26 @@ About
 {% endblock title %}
 
 {% block body %}
-Hey this is about
+
+<div class="container mb-3 py-4 ">
+
+    <form method="post" action="/about">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="name">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone number">
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email">
+        </div>
+        <button class="btn btn-outline-primary" type="submit">Submit Information</button>
+    </form>
+
+</div>
+
 {% endblock body %}
