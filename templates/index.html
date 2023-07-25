@@ -3,5 +3,25 @@
 Index
 {% endblock title %}
 {% block body %}
-Hey this is the Index page block
+
+<div class="container mb-3 py-4 ">
+
+    <form method="post" action="/index">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Fist name">
+        </div>
+        <div class="form-group">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Last name">
+        </div>
+        
+        <button class="btn btn-outline-primary" type="submit">Submit Information</button>
+    </form>
+
+</div>
+
+
+
 {% endblock body %}

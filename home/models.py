@@ -9,4 +9,15 @@ class About(models.Model):
 
     def __str__(self):
         return self.name
+
+class Extra(models.Model):
+    fname = models.CharField(max_length=20)
+    lname = models.CharField(max_length=20)
+
+    class Meta:
+        managed = False
+        db_table = "extra"
+    
+    def __str__(self):
+        return self.fname
     
